@@ -20,9 +20,9 @@ export default function Home() {
           <Image
             src={profile.photo}
             alt={profile.name}
-            width={160}
-            height={160}
-            className="rounded-full border-4 border-blue-600 object-cover w-40 h-40"
+            width={224}
+            height={224}
+            className="rounded-full border-4 border-blue-600 object-cover w-56 h-56 shrink-0"
           />
           <div className="flex-1 text-center sm:text-left">
             <h1 className="text-3xl font-bold text-white">{profile.name}</h1>
@@ -69,14 +69,21 @@ export default function Home() {
         )}
 
         {/* Skills */}
-        {profile.skills.length > 0 && (
+        {Object.keys(profile.skills).length > 0 && (
           <section>
-            <h2 className="text-xl font-semibold text-white border-b border-gray-800 pb-2 mb-3">Skills</h2>
-            <div className="flex flex-wrap gap-2">
-              {profile.skills.map((s) => (
-                <span key={s} className="px-3 py-1 bg-blue-900/40 border border-blue-700 rounded-full text-sm text-blue-300">
-                  {s}
-                </span>
+            <h2 className="text-xl font-semibold text-white border-b border-gray-800 pb-2 mb-4">Skills</h2>
+            <div className="space-y-4">
+              {Object.entries(profile.skills).map(([category, items]) => (
+                <div key={category}>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">{category}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {(items as string[]).map((s) => (
+                      <span key={s} className="px-3 py-1 bg-blue-900/40 border border-blue-700 rounded-full text-sm text-blue-300">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </section>

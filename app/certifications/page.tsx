@@ -19,7 +19,9 @@ export default function CertificationsPage() {
                 {"description" in cert && cert.description && (
                   <p className="text-gray-500 text-xs mt-2 leading-relaxed">{cert.description as string}</p>
                 )}
-                <p className="text-gray-500 text-xs mt-2">{cert.year}</p>
+                <p className="text-gray-500 text-xs mt-2">
+                  {cert.year}{"validUntil" in cert && cert.validUntil ? ` · Valid until ${cert.validUntil as string}` : ""}
+                </p>
               </div>
               <div className="flex gap-2 flex-wrap">
                 <a

@@ -5,7 +5,13 @@ export const profile = {
   email: "gyanaranjanmishra06@gmail.com",
   photo: "/profile.jpeg",
   bio: "", // Fill in your bio/journey
-  skills: [] as string[], // Fill in your skills
+  skills: {
+    "Programming & Data": ["Python", "Pandas", "NumPy", "SQL", "Git", "AWS", "Scikit-learn", "TensorFlow", "Keras"],
+    "Machine Learning": ["Regression", "Classification", "Clustering", "Random Forest", "XGBoost", "SVM", "Neural Networks", "NLP", "SMOTE", "Hyperparameter Tuning", "Time-Series Forecasting", "ROC-AUC"],
+    "Analytics & Visualization": ["EDA", "Matplotlib", "Seaborn", "Plotly", "Streamlit", "Power BI", "Dashboard Automation"],
+    "Materials Science": ["Physical Metallurgy", "Phase Transformations", "Thermodynamics", "Steel Processing", "Microstructure Analysis", "Thermomechanical Processing", "Deformation Mechanics"],
+    "Generative AI": ["Prompt Engineering", "LLM Integration", "RAG", "Claude API", "Vector Databases", "AI Application Development"],
+  },
   hobbies: [] as string[], // Fill in your hobbies
   links: {
     github: "https://github.com/gyanaranjanmishra",
@@ -172,39 +178,40 @@ export const certifications = [
   {
     name: "AWS Certified AI Practitioner",
     issuer: "Amazon Web Services",
-    year: 2024,
+    year: "Apr 2026",
+    validUntil: "Apr 2029",
     pdf: "/certifications/AWS Certified AI Practitioner certificate.pdf",
   },
   {
     name: "SQL Basic Certificate",
     issuer: "HackerRank",
-    year: 2024,
+    year: "Apr 2026",
     pdf: "/certifications/sql_basic certificate.pdf",
-  },
-  {
-    name: "Supervised Machine Learning: Regression and Classification",
-    issuer: "DeepLearning.AI / Coursera",
-    instructor: "Andrew Ng, DeepLearning.AI",
-    description: "Course 1 of the ML Specialization. Covers linear & logistic regression, gradient descent, and regularization.",
-    year: 2024,
-    pdf: "/certifications/Coursera XH3GT8QLY26A.pdf",
-    verify: "https://coursera.org/verify/XH3GT8QLY26A",
   },
   {
     name: "Machine Learning Specialization",
     issuer: "DeepLearning.AI / Coursera",
     instructor: "Andrew Ng, DeepLearning.AI",
     description: "Non-credit specialization covering Supervised Machine Learning (Regression & Classification), Advanced Learning Algorithms, and Unsupervised Learning, Recommenders & Reinforcement Learning.",
-    year: 2024,
+    year: "Oct 2023",
     pdf: "/certifications/Coursera XJNDBN955CQL.pdf",
     verify: "https://coursera.org/verify/specialization/XJNDBN955CQL",
+  },
+  {
+    name: "Supervised Machine Learning: Regression and Classification",
+    issuer: "DeepLearning.AI / Coursera",
+    instructor: "Andrew Ng, DeepLearning.AI",
+    description: "Course 1 of the ML Specialization. Covers linear & logistic regression, gradient descent, and regularization.",
+    year: "Aug 2023",
+    pdf: "/certifications/Coursera XH3GT8QLY26A.pdf",
+    verify: "https://coursera.org/verify/XH3GT8QLY26A",
   },
   {
     name: "Advanced Learning Algorithms",
     issuer: "DeepLearning.AI / Coursera",
     instructor: "Andrew Ng, DeepLearning.AI",
     description: "Course 2 of the ML Specialization. Covers neural networks, decision trees, and ML development best practices.",
-    year: 2024,
+    year: "Oct 2023",
     pdf: "/certifications/Coursera 2nd course.pdf",
     verify: "",
   },
