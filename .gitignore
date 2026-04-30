@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large PDFs - not tracked in git, deployed separately
+public/papers/
+public/patents/
