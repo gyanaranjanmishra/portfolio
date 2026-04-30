@@ -188,10 +188,13 @@ export const certifications = [
     pdf: "/certifications/Coursera XH3GT8QLY26A.pdf",
   },
   {
-    name: "Coursera Certificate",
-    issuer: "Coursera",
+    name: "Machine Learning Specialization",
+    issuer: "DeepLearning.AI / Coursera",
+    instructor: "Andrew Ng, DeepLearning.AI",
+    description: "Non-credit specialization covering Supervised Machine Learning (Regression & Classification), Advanced Learning Algorithms, and Unsupervised Learning, Recommenders & Reinforcement Learning.",
     year: 2024,
     pdf: "/certifications/Coursera XJNDBN955CQL.pdf",
+    verify: "https://coursera.org/verify/specialization/XJNDBN955CQL",
   },
   {
     name: "Coursera Certificate",
