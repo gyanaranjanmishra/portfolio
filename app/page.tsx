@@ -10,21 +10,8 @@ const socialIcons: Record<string, string> = {
   streamlit: "Streamlit",
 };
 
-const categoryColors: Record<string, string> = {
-  "Programming & Data":    "bg-emerald-500/20 text-emerald-300 border border-emerald-600",
-  "Machine Learning":      "bg-violet-500/20 text-violet-200 border border-violet-500",
-  "Analytics & Visualization": "bg-orange-500/20 text-orange-200 border border-orange-500",
-  "Materials Science":     "bg-teal-500/20 text-teal-200 border border-teal-500",
-  "Generative AI":         "bg-rose-500/20 text-rose-200 border border-rose-500",
-};
-
-const categoryLabel: Record<string, string> = {
-  "Programming & Data":        "text-emerald-400",
-  "Machine Learning":          "text-violet-400",
-  "Analytics & Visualization": "text-orange-400",
-  "Materials Science":         "text-teal-400",
-  "Generative AI":             "text-rose-400",
-};
+const tagStyle = "bg-emerald-500/20 text-emerald-300 border border-emerald-600";
+const labelStyle = "text-emerald-400";
 
 export default function Home() {
   return (
@@ -68,8 +55,41 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Two-column layout: main + sidebar */}
+        {/* Two-column layout: sidebar + main */}
         <div className="flex flex-col lg:flex-row gap-8 items-start">
+
+          {/* Sidebar: Skills + Hobbies */}
+          <aside className="w-full lg:w-72 shrink-0 space-y-6">
+            {Object.keys(profile.skills).length > 0 && (
+              <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 space-y-5">
+                <h2 className="text-lg font-semibold text-white border-b border-gray-800 pb-2">Skills</h2>
+                {Object.entries(profile.skills).map(([category, items]) => (
+                  <div key={category}>
+                    <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${labelStyle}`}>
+                      {category}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {(items as string[]).map((s) => (
+                        <span key={s} className={`px-2 py-0.5 rounded-md text-xs font-medium ${tagStyle}`}>
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {profile.hobbies.length > 0 && (
+              <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
+                <h2 className="text-lg font-semibold text-white border-b border-gray-800 pb-2 mb-4">Hobbies</h2>
+                <div className="flex flex-wrap gap-2">
+                  {profile.hobbies.map((h) => (
+                    <span key={h} className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300">{h}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </aside>
 
           {/* Main content */}
           <div className="flex-1 space-y-8">
@@ -114,44 +134,6 @@ export default function Home() {
             )}
           </div>
 
-          {/* Sidebar: Skills + Hobbies */}
-          <aside className="w-full lg:w-72 shrink-0 space-y-6">
-
-            {/* Skills */}
-            {Object.keys(profile.skills).length > 0 && (
-              <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 space-y-5">
-                <h2 className="text-lg font-semibold text-white border-b border-gray-800 pb-2">Skills</h2>
-                {Object.entries(profile.skills).map(([category, items]) => (
-                  <div key={category}>
-                    <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${categoryLabel[category] ?? "text-gray-400"}`}>
-                      {category}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {(items as string[]).map((s) => (
-                        <span key={s} className={`px-2 py-0.5 rounded-md text-xs font-medium ${categoryColors[category] ?? "bg-gray-700 text-gray-200 border border-gray-600"}`}>
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Hobbies */}
-            {profile.hobbies.length > 0 && (
-              <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-                <h2 className="text-lg font-semibold text-white border-b border-gray-800 pb-2 mb-4">Hobbies</h2>
-                <div className="flex flex-wrap gap-2">
-                  {profile.hobbies.map((h) => (
-                    <span key={h} className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300">
-                      {h}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </aside>
         </div>
       </div>
     </>

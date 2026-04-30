@@ -6,11 +6,11 @@ export const profile = {
   photo: "/profile.jpeg",
   bio: "", // Fill in your bio/journey
   skills: {
-    "Programming & Data": ["Python", "Pandas", "NumPy", "SQL", "Git", "AWS", "Scikit-learn", "TensorFlow", "Keras"],
-    "Machine Learning": ["Regression", "Classification", "Clustering", "Random Forest", "XGBoost", "SVM", "Neural Networks", "NLP", "SMOTE", "Hyperparameter Tuning", "Time-Series Forecasting", "ROC-AUC"],
+    "Programming & Data": ["Python", "Pandas", "NumPy", "SQL", "Git", "AWS", "Scikit-learn", "TensorFlow", "Keras", "Word2Vec", "Gensim", "NLTK", "FuzzyWuzzy"],
+    "Machine Learning": ["Regression", "Classification", "Clustering", "Random Forest", "XGBoost", "SVM", "Neural Networks", "SMOTE", "Hyperparameter Tuning", "Time-Series Forecasting", "ROC-AUC", "BERT", "TF-IDF", "spaCy"],
     "Analytics & Visualization": ["EDA", "Matplotlib", "Seaborn", "Plotly", "Streamlit", "Power BI", "Dashboard Automation"],
     "Materials Science": ["Physical Metallurgy", "Phase Transformations", "Thermodynamics", "Steel Processing", "Microstructure Analysis", "Thermomechanical Processing", "Deformation Mechanics"],
-    "Generative AI": ["Prompt Engineering", "LLM Integration", "RAG", "Claude API", "Vector Databases", "AI Application Development"],
+    "Generative AI": ["Prompt Engineering", "LLM Integration", "RAG", "Claude API", "FAISS", "Vector Databases", "AI Application Development"],
   },
   hobbies: [] as string[], // Fill in your hobbies
   links: {
