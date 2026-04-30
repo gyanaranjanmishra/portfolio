@@ -182,10 +182,13 @@ export const certifications = [
     pdf: "/certifications/sql_basic certificate.pdf",
   },
   {
-    name: "Coursera Certificate",
-    issuer: "Coursera",
+    name: "Supervised Machine Learning: Regression and Classification",
+    issuer: "DeepLearning.AI / Coursera",
+    instructor: "Andrew Ng, DeepLearning.AI",
+    description: "Course 1 of the ML Specialization. Covers linear & logistic regression, gradient descent, and regularization.",
     year: 2024,
     pdf: "/certifications/Coursera XH3GT8QLY26A.pdf",
+    verify: "https://coursera.org/verify/XH3GT8QLY26A",
   },
   {
     name: "Machine Learning Specialization",
@@ -197,10 +200,13 @@ export const certifications = [
     verify: "https://coursera.org/verify/specialization/XJNDBN955CQL",
   },
   {
-    name: "Coursera Certificate",
-    issuer: "Coursera",
+    name: "Advanced Learning Algorithms",
+    issuer: "DeepLearning.AI / Coursera",
+    instructor: "Andrew Ng, DeepLearning.AI",
+    description: "Course 2 of the ML Specialization. Covers neural networks, decision trees, and ML development best practices.",
     year: 2024,
     pdf: "/certifications/Coursera 2nd course.pdf",
+    verify: "",
   },
 ];
 
