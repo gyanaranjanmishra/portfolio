@@ -14,7 +14,7 @@ export default function PublicationsPage() {
       const res = await fetch("/api/summarize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pdfPath: pdf, title }),
+        body: JSON.stringify({ driveLink: pdf, title }),
       });
       const data = await res.json();
       setSummaries((s) => ({ ...s, [index]: data.summary || data.error }));
