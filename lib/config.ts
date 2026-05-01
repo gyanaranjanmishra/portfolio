@@ -220,3 +220,37 @@ export const certifications = [
 export const ongoingProjects: { name: string; description: string }[] = [
   // Fill in your ongoing projects
 ];
+
+export const selfLearningProjects = [
+  {
+    title: "Game of Thrones RAG Q&A System",
+    subtitle: "Retrieval-Augmented Generation over A Song of Ice and Fire",
+    description:
+      "A RAG-based question answering system built over all 5 books of the A Song of Ice and Fire series. Ask any question about the story, characters, or events — the system retrieves the most relevant passages and generates grounded answers using Claude Haiku with source attribution.",
+    highlights: [
+      "7,394 token-based chunks (max 400 tokens, 80-token overlap) using MPNet tokenizer",
+      "FAISS IndexFlatIP with L2 normalisation for cosine similarity search (top-k=30)",
+      "CrossEncoder reranker (ms-marco-MiniLM-L-6-v2) narrows to top 3 passages",
+      "Context window expansion (±4 chunks) passes ~27 chunks to Claude Haiku",
+      "Replaced RoBERTa-large (512-token limit) with Claude Haiku (200K context) — unlocking full retrieval pipeline",
+      "Source attribution shows which book and chunk answered each question",
+    ],
+    architecture: [
+      { step: "Embed", detail: "MPNet all-mpnet-base-v2 (768d)" },
+      { step: "Retrieve", detail: "FAISS cosine similarity, top-k=30" },
+      { step: "Rerank", detail: "CrossEncoder, top-3 passages" },
+      { step: "Expand", detail: "±4 chunk window → ~27 chunks" },
+      { step: "Answer", detail: "Claude Haiku (claude-haiku-4-5)" },
+    ],
+    stack: ["Python", "FAISS", "Sentence Transformers", "CrossEncoder", "Claude Haiku", "Jupyter", "NumPy", "Anthropic SDK"],
+    stats: [
+      { label: "Chunks", value: "7,394" },
+      { label: "Embedding Dim", value: "768" },
+      { label: "Books Indexed", value: "5" },
+      { label: "Context Window", value: "200K tokens" },
+    ],
+    notebook: "https://github.com/gyanaranjanmishra/GOT",
+    status: "Complete",
+    category: "NLP / Generative AI",
+  },
+];
