@@ -249,7 +249,7 @@ export const selfLearningProjects = [
       { label: "Books Indexed", value: "5" },
       { label: "Context Window", value: "200K tokens" },
     ],
-    notebook: "https://github.com/gyanaranjanmishra/GOT",
+    notebook: "https://github.com/gyanaranjanmishra/GOT-QA",
     status: "Complete",
     category: "NLP / Generative AI",
   },
