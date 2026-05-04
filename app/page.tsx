@@ -55,6 +55,22 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Quick stats */}
+        <section className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[
+            { label: "Publications", value: publications.length, href: "/publications" },
+            { label: "Patents", value: patents.length, href: "/patents" },
+            { label: "Certifications", value: certifications.length, href: "/certifications" },
+            { label: "Ongoing Projects", value: ongoingProjects.length, href: "#projects" },
+          ].map((s) => (
+            <Link key={s.label} href={s.href}
+              className="bg-gray-900 border border-gray-800 rounded-xl p-4 text-center hover:border-blue-600 transition-colors">
+              <div className="text-3xl font-bold text-blue-400">{s.value}</div>
+              <div className="text-sm text-gray-400 mt-1">{s.label}</div>
+            </Link>
+          ))}
+        </section>
+
         {/* Two-column layout: sidebar + main */}
         <div className="flex flex-col lg:flex-row gap-8 items-start">
 
@@ -97,26 +113,14 @@ export default function Home() {
             {/* Bio */}
             {profile.bio && (
               <section>
-                <h2 className="text-xl font-semibold text-white border-b border-gray-800 pb-2 mb-3">About Me</h2>
-                <p className="text-gray-300 leading-relaxed">{profile.bio}</p>
+                <h2 className="text-xl font-semibold text-white border-b border-gray-800 pb-2 mb-4">About Me</h2>
+                <div className="space-y-4">
+                  {profile.bio.split('\n\n').map((para, i) => (
+                    <p key={i} className="text-gray-100 leading-relaxed text-sm">{para}</p>
+                  ))}
+                </div>
               </section>
             )}
-
-            {/* Quick stats */}
-            <section className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {[
-                { label: "Publications", value: publications.length, href: "/publications" },
-                { label: "Patents", value: patents.length, href: "/patents" },
-                { label: "Certifications", value: certifications.length, href: "/certifications" },
-                { label: "Ongoing Projects", value: ongoingProjects.length, href: "#projects" },
-              ].map((s) => (
-                <Link key={s.label} href={s.href}
-                  className="bg-gray-900 border border-gray-800 rounded-xl p-4 text-center hover:border-blue-600 transition-colors">
-                  <div className="text-3xl font-bold text-blue-400">{s.value}</div>
-                  <div className="text-sm text-gray-400 mt-1">{s.label}</div>
-                </Link>
-              ))}
-            </section>
 
             {/* Ongoing Projects */}
             {ongoingProjects.length > 0 && (
