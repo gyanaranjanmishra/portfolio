@@ -247,7 +247,7 @@ export const aiPapers = [
       "Introduced the Transformer architecture, replacing recurrent networks entirely with self-attention mechanisms. Every major LLM today — BERT, GPT, Claude — is built on this foundation. Arguably the most cited paper in modern AI.",
     url: "https://arxiv.org/abs/1706.03762",
     improvement:
-      "Fine-tune a transformer on materials science literature to extract properties, phase conditions, or processing parameters from paper abstracts — your domain knowledge gives you an edge in defining the task and evaluating outputs.",
+      "Train a transformer from scratch on a domain-specific corpus — domain pre-training consistently outperforms general-purpose models on specialised downstream tasks and builds deeper intuition for attention mechanics.",
   },
   {
     title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
@@ -258,7 +258,7 @@ export const aiPapers = [
       "Established bidirectional pre-training as the dominant paradigm for NLP. A single pre-trained BERT model fine-tuned on small task-specific datasets outperformed every prior approach on 11 benchmarks simultaneously.",
     url: "https://arxiv.org/abs/1810.04805",
     improvement:
-      "Fine-tune MatBERT or SciBERT on your own publications and patents to build a named entity recogniser for materials properties and processing conditions — a directly publishable applied NLP contribution.",
+      "Fine-tune BERT on a specialised downstream task — NER, classification, or Q&A — using a small domain dataset. Even 1K–10K labelled examples yield large gains over zero-shot performance and demonstrate practical transfer learning skill.",
   },
   {
     title: "Language Models are Few-Shot Learners (GPT-3)",
@@ -269,7 +269,7 @@ export const aiPapers = [
       "Demonstrated that scaling alone unlocks emergent capabilities: a 175B parameter model could perform translation, Q&A, and reasoning with only a few examples in the prompt — no fine-tuning required. Redefined what 'pre-trained' means.",
     url: "https://arxiv.org/abs/2005.14165",
     improvement:
-      "Build a prompt-engineered materials Q&A assistant over your own publication corpus using Claude or GPT-4 — you already have the RAG infrastructure from GOT-QA. This would showcase applied GenAI with genuine domain depth.",
+      "Explore chain-of-thought prompting and structured output formats on domain-specific tasks — understanding how context window design and prompt engineering affect output quality is a core applied LLM skill.",
   },
   {
     title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
@@ -280,7 +280,7 @@ export const aiPapers = [
       "Formalised the RAG paradigm — grounding LLM generation in retrieved documents to reduce hallucination and enable factual, updatable knowledge. Foundation of most production AI assistants today.",
     url: "https://arxiv.org/abs/2005.11401",
     improvement:
-      "You have already built a RAG system. Extending it to index your own publications, patents, and a materials science corpus would produce a domain-specific research assistant — a portfolio-defining project that directly combines your two careers.",
+      "Build a RAG pipeline over a specialised corpus, systematically comparing chunking strategies, embedding models, and rerankers to measure their effect on retrieval quality and answer faithfulness.",
   },
   {
     title: "ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)",
@@ -291,7 +291,7 @@ export const aiPapers = [
       "Won ImageNet by a margin that shocked the field and triggered the modern deep learning era. Showed that GPUs + large data + deep CNNs together produce qualitatively different results — none of the three alone is sufficient.",
     url: "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
     improvement:
-      "Apply CNNs to microstructure image classification — identifying phases or defects in SEM or EBSD images of steels. Your materials science background means you can label data correctly and interpret results, which most computer vision practitioners cannot.",
+      "Replicate AlexNet training on a custom image dataset using modern frameworks — understanding the original training dynamics, data augmentation choices, and GPU utilisation builds intuition that using pre-trained models alone cannot provide.",
   },
   {
     title: "Deep Residual Learning for Image Recognition (ResNet)",
@@ -302,7 +302,7 @@ export const aiPapers = [
       "Introduced residual skip connections, enabling networks 10× deeper than before without vanishing gradients. ResNet-50 remains one of the most widely used feature extractors in transfer learning across every vision domain.",
     url: "https://arxiv.org/abs/1512.03385",
     improvement:
-      "Use a pre-trained ResNet as a frozen backbone for microstructure image transfer learning — fine-tune only the final layers on a small labelled steel dataset. This is a low-data, high-impact approach that suits research-scale datasets.",
+      "Apply transfer learning with a pre-trained ResNet on a custom classification task with limited labelled data — systematically comparing frozen vs. fine-tuned layers reveals how domain shift affects feature reuse.",
   },
   {
     title: "Generative Adversarial Networks",
@@ -313,7 +313,7 @@ export const aiPapers = [
       "Introduced the adversarial training framework — a generator network learns to fool a discriminator network, producing realistic synthetic data. Foundational to image synthesis, data augmentation, and the entire generative AI wave.",
     url: "https://arxiv.org/abs/1406.2661",
     improvement:
-      "GANs for synthetic microstructure generation or experimental data augmentation could directly address the small-dataset problem in materials research. Generating plausible steel microstructures conditioned on composition is a publishable research direction.",
+      "Implement a conditional GAN to generate class-conditioned synthetic samples for data augmentation — particularly effective in low-data settings where class imbalance or scarcity limits model performance.",
   },
   {
     title: "Distributed Representations of Words and Phrases (Word2Vec)",
@@ -324,7 +324,7 @@ export const aiPapers = [
       "Introduced efficient skip-gram and CBOW algorithms for learning dense word vectors that encode semantic and syntactic relationships. Popularised embeddings as a general representation strategy across all of NLP.",
     url: "https://arxiv.org/abs/1301.3781",
     improvement:
-      "You have already applied Word2Vec in your Question Pairs project. Training a domain-specific model on materials science literature (journal abstracts, patents) could power property extraction and literature mining tools — a practical extension with clear industry value.",
+      "Train a domain-specific Word2Vec model on a targeted corpus and compare its semantic space against general-purpose embeddings — domain vocabulary often encodes relationships that general models miss entirely.",
   },
   {
     title: "Human-Level Control through Deep Reinforcement Learning (DQN)",
@@ -335,7 +335,7 @@ export const aiPapers = [
       "A single agent learned to play 49 Atari games from raw pixels at human level using deep Q-networks and experience replay. Landmark demonstration that deep RL can acquire complex behaviour from high-dimensional input without hand-crafted features.",
     url: "https://www.nature.com/articles/nature14236",
     improvement:
-      "Formulate hot rolling process parameter optimisation as a sequential decision problem — temperature, reduction per pass, and cooling rates as actions, with mechanical properties as reward. Connects your process knowledge to a high-profile ML paradigm.",
+      "Apply deep Q-learning to a custom environment such as resource allocation or process control using OpenAI Gymnasium — bridging RL theory to a practical sequential decision-making problem.",
   },
   {
     title: "High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)",
@@ -346,7 +346,7 @@ export const aiPapers = [
       "Made high-quality image generation practical by running the diffusion process in a compressed latent space rather than pixel space. Enabled Stable Diffusion and became the architecture of choice for text-to-image generation.",
     url: "https://arxiv.org/abs/2112.10752",
     improvement:
-      "Adapting latent diffusion to generate materials microstructures conditioned on alloy composition and processing parameters would be genuinely novel research at the intersection of generative AI and materials informatics — publishable and highly differentiating.",
+      "Fine-tune a pre-trained latent diffusion model on a domain-specific image dataset using DreamBooth or LoRA — adapting generative models to specialised visual domains without training from scratch.",
   },
 ];
 
