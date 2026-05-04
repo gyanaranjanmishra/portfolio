@@ -8,6 +8,7 @@ const links = [
   { href: "/publications", label: "Publications" },
   { href: "/patents", label: "Patents" },
   { href: "/certifications", label: "Certifications" },
+  { href: "/ai-papers", label: "AI Papers" },
   { href: "/resume", label: "Resume" },
   { href: "/resume-scorer", label: "Resume Scorer" },
 ];

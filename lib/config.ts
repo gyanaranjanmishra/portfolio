@@ -237,6 +237,119 @@ export const ongoingProjects: { name: string; description: string }[] = [
   // Fill in your ongoing projects
 ];
 
+export const aiPapers = [
+  {
+    title: "Attention Is All You Need",
+    authors: "Vaswani A, Shazeer N, Parmar N et al.",
+    year: 2017,
+    venue: "NeurIPS",
+    brief:
+      "Introduced the Transformer architecture, replacing recurrent networks entirely with self-attention mechanisms. Every major LLM today — BERT, GPT, Claude — is built on this foundation. Arguably the most cited paper in modern AI.",
+    url: "https://arxiv.org/abs/1706.03762",
+    improvement:
+      "Fine-tune a transformer on materials science literature to extract properties, phase conditions, or processing parameters from paper abstracts — your domain knowledge gives you an edge in defining the task and evaluating outputs.",
+  },
+  {
+    title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    authors: "Devlin J, Chang M-W, Lee K, Toutanova K",
+    year: 2018,
+    venue: "NAACL",
+    brief:
+      "Established bidirectional pre-training as the dominant paradigm for NLP. A single pre-trained BERT model fine-tuned on small task-specific datasets outperformed every prior approach on 11 benchmarks simultaneously.",
+    url: "https://arxiv.org/abs/1810.04805",
+    improvement:
+      "Fine-tune MatBERT or SciBERT on your own publications and patents to build a named entity recogniser for materials properties and processing conditions — a directly publishable applied NLP contribution.",
+  },
+  {
+    title: "Language Models are Few-Shot Learners (GPT-3)",
+    authors: "Brown T, Mann B, Ryder N et al.",
+    year: 2020,
+    venue: "NeurIPS",
+    brief:
+      "Demonstrated that scaling alone unlocks emergent capabilities: a 175B parameter model could perform translation, Q&A, and reasoning with only a few examples in the prompt — no fine-tuning required. Redefined what 'pre-trained' means.",
+    url: "https://arxiv.org/abs/2005.14165",
+    improvement:
+      "Build a prompt-engineered materials Q&A assistant over your own publication corpus using Claude or GPT-4 — you already have the RAG infrastructure from GOT-QA. This would showcase applied GenAI with genuine domain depth.",
+  },
+  {
+    title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    authors: "Lewis P, Perez E, Piktus A et al.",
+    year: 2020,
+    venue: "NeurIPS",
+    brief:
+      "Formalised the RAG paradigm — grounding LLM generation in retrieved documents to reduce hallucination and enable factual, updatable knowledge. Foundation of most production AI assistants today.",
+    url: "https://arxiv.org/abs/2005.11401",
+    improvement:
+      "You have already built a RAG system. Extending it to index your own publications, patents, and a materials science corpus would produce a domain-specific research assistant — a portfolio-defining project that directly combines your two careers.",
+  },
+  {
+    title: "ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)",
+    authors: "Krizhevsky A, Sutskever I, Hinton G",
+    year: 2012,
+    venue: "NeurIPS",
+    brief:
+      "Won ImageNet by a margin that shocked the field and triggered the modern deep learning era. Showed that GPUs + large data + deep CNNs together produce qualitatively different results — none of the three alone is sufficient.",
+    url: "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+    improvement:
+      "Apply CNNs to microstructure image classification — identifying phases or defects in SEM or EBSD images of steels. Your materials science background means you can label data correctly and interpret results, which most computer vision practitioners cannot.",
+  },
+  {
+    title: "Deep Residual Learning for Image Recognition (ResNet)",
+    authors: "He K, Zhang X, Ren S, Sun J",
+    year: 2015,
+    venue: "CVPR",
+    brief:
+      "Introduced residual skip connections, enabling networks 10× deeper than before without vanishing gradients. ResNet-50 remains one of the most widely used feature extractors in transfer learning across every vision domain.",
+    url: "https://arxiv.org/abs/1512.03385",
+    improvement:
+      "Use a pre-trained ResNet as a frozen backbone for microstructure image transfer learning — fine-tune only the final layers on a small labelled steel dataset. This is a low-data, high-impact approach that suits research-scale datasets.",
+  },
+  {
+    title: "Generative Adversarial Networks",
+    authors: "Goodfellow I, Pouget-Abadie J, Mirza M et al.",
+    year: 2014,
+    venue: "NeurIPS",
+    brief:
+      "Introduced the adversarial training framework — a generator network learns to fool a discriminator network, producing realistic synthetic data. Foundational to image synthesis, data augmentation, and the entire generative AI wave.",
+    url: "https://arxiv.org/abs/1406.2661",
+    improvement:
+      "GANs for synthetic microstructure generation or experimental data augmentation could directly address the small-dataset problem in materials research. Generating plausible steel microstructures conditioned on composition is a publishable research direction.",
+  },
+  {
+    title: "Distributed Representations of Words and Phrases (Word2Vec)",
+    authors: "Mikolov T, Sutskever I, Chen K, Corrado G, Dean J",
+    year: 2013,
+    venue: "NeurIPS",
+    brief:
+      "Introduced efficient skip-gram and CBOW algorithms for learning dense word vectors that encode semantic and syntactic relationships. Popularised embeddings as a general representation strategy across all of NLP.",
+    url: "https://arxiv.org/abs/1301.3781",
+    improvement:
+      "You have already applied Word2Vec in your Question Pairs project. Training a domain-specific model on materials science literature (journal abstracts, patents) could power property extraction and literature mining tools — a practical extension with clear industry value.",
+  },
+  {
+    title: "Human-Level Control through Deep Reinforcement Learning (DQN)",
+    authors: "Mnih V, Kavukcuoglu K, Silver D et al.",
+    year: 2015,
+    venue: "Nature",
+    brief:
+      "A single agent learned to play 49 Atari games from raw pixels at human level using deep Q-networks and experience replay. Landmark demonstration that deep RL can acquire complex behaviour from high-dimensional input without hand-crafted features.",
+    url: "https://www.nature.com/articles/nature14236",
+    improvement:
+      "Formulate hot rolling process parameter optimisation as a sequential decision problem — temperature, reduction per pass, and cooling rates as actions, with mechanical properties as reward. Connects your process knowledge to a high-profile ML paradigm.",
+  },
+  {
+    title: "High-Resolution Image Synthesis with Latent Diffusion Models (Stable Diffusion)",
+    authors: "Rombach R, Blattmann A, Lorenz D, Esser P, Ommer B",
+    year: 2022,
+    venue: "CVPR",
+    brief:
+      "Made high-quality image generation practical by running the diffusion process in a compressed latent space rather than pixel space. Enabled Stable Diffusion and became the architecture of choice for text-to-image generation.",
+    url: "https://arxiv.org/abs/2112.10752",
+    improvement:
+      "Adapting latent diffusion to generate materials microstructures conditioned on alloy composition and processing parameters would be genuinely novel research at the intersection of generative AI and materials informatics — publishable and highly differentiating.",
+  },
+];
+
 export const selfLearningProjects = [
   {
     title: "Game of Thrones RAG Q&A System",
