@@ -116,7 +116,7 @@ export default function Home() {
                 <h2 className="text-xl font-semibold text-white border-b border-gray-800 pb-2 mb-4">About Me</h2>
                 <div className="space-y-4">
                   {profile.bio.split('\n\n').map((para, i) => (
-                    <p key={i} className="text-gray-100 leading-relaxed text-sm">{para}</p>
+                    <p key={i} className="text-blue-400 leading-relaxed text-sm font-light">{para}</p>
                   ))}
                 </div>
               </section>
