@@ -74,7 +74,7 @@ export default function Home() {
         {/* Two-column layout: sidebar + main */}
         <div className="flex flex-col lg:flex-row gap-8 items-start">
 
-          {/* Sidebar: Skills + Hobbies */}
+          {/* Sidebar: Skills */}
           <aside className="w-full lg:w-72 shrink-0 space-y-6">
             {Object.keys(profile.skills).length > 0 && (
               <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 space-y-5">
@@ -93,16 +93,6 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
-            )}
-            {profile.hobbies.length > 0 && (
-              <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-                <h2 className="text-lg font-semibold text-white border-b border-gray-800 pb-2 mb-4">Hobbies</h2>
-                <div className="flex flex-wrap gap-2">
-                  {profile.hobbies.map((h) => (
-                    <span key={h} className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300">{h}</span>
-                  ))}
-                </div>
               </div>
             )}
           </aside>
@@ -139,6 +129,38 @@ export default function Home() {
           </div>
 
         </div>
+
+        {/* Hobbies */}
+        {profile.hobbies.length > 0 && (
+          <section>
+            <h2 className="text-xl font-semibold text-white border-b border-gray-800 pb-2 mb-6">Hobbies</h2>
+            <div className="space-y-6">
+              {profile.hobbies.map((hobby) => (
+                <div key={hobby.name} className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-white mb-3">{hobby.name}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">{hobby.description}</p>
+                  </div>
+                  {hobby.photos.length > 0 && (
+                    <div className="grid grid-cols-3 gap-1 border-t border-gray-800">
+                      {hobby.photos.map((src, i) => (
+                        <div key={i} className="relative aspect-square">
+                          <Image
+                            src={src}
+                            alt={`${hobby.name} photo ${i + 1}`}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
       </div>
     </>
   );
