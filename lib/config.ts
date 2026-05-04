@@ -24,7 +24,7 @@ Since then, I have been building a portfolio spanning NLP, GenAI, and applied ML
   },
   hobbies: [
     {
-      name: "Reef Aquarium",
+      name: "My Slice of Ocean",
       description: `Away from screens and data, I am a reefer at heart. Over the past decade I have maintained several reef aquariums — living ecosystems that demand as much analytical thinking as they do patience. Keeping a reef healthy is a quiet intersection of biology, chemistry, and automation; you learn to read water parameters the way you read model outputs, and you build systems so the tank thrives even when you are not watching. But beyond the science, the reef is simply where I go when life gets loud. There is something grounding about a world that moves on its own terms — coral that grows a millimetre a week, fish that don't care about deadlines. It is the one place I have always found stillness.`,
       photos: ["/reef/reef1.jpg", "/reef/reef2.jpg", "/reef/reef3.jpg"],
     },
