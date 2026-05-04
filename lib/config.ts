@@ -4,7 +4,17 @@ export const profile = {
   affiliation: "University of New Brunswick",
   email: "gyanaranjanmishra06@gmail.com",
   photo: "/profile.jpeg",
-  bio: "", // Fill in your bio/journey
+  bio: `By now you already have an idea about my background, but I'd like to give it a personal touch here.
+
+I got my bachelor's degree from NIT Rourkela, India, where I also took my first programming courses. It was tough in the beginning — adapting to code felt foreign — but the foundation was laid, even if I didn't get to use it much in the years that followed.
+
+After graduating, I started my professional career at Indian Oil Corporation, one of India's major petroleum product manufacturers. It was a good start, but not challenging enough for my liking. That restlessness pushed me toward my master's at IIT Bombay, which I entered by clearing GATE — one of the toughest competitive exams in India. I specialised in process engineering and used C++ to support my thesis work, which is also where I recognised one of my core strengths: the ability to acquire new skills quickly and deliver results under pressure.
+
+With that expertise, I joined Tata Steel Ltd — India's largest steel manufacturer — as a Researcher in R&D. For several years I applied metallurgical and modelling skills to solve real-world challenges in product development, failure analysis, and process optimisation. Then came 2017–18 and the Industry 4.0 wave. Data modelling became central to our work, and that was my first real exposure to Data Science. I chose Python for its versatility and gradually learned the nuances of the ML lifecycle — data wrangling methodologies, model types & usage, performance optimisation methodologies, and collaborating with cross-functional teams to solve problems at industrial scale.
+
+Post Tata Steel, I joined the University of New Brunswick as a doctoral student in Mechanical Engineering. At Tata Steel I had spent over a decade generating proprietary industrial data — designing experiments, characterising microstructures, filing patents. At UNB, I started modelling that same class of data with ML. One paper in particular — comparing traditional constitutive models against machine learning for predicting high-temperature deformation behaviour — wasn't just an academic exercise; it was the moment I realised ML was the sharper tool. I completed coursework in Data Analytics and Research Methods, built and published a deep neural network model for material property prediction using multi-source experimental data, and that work solidified my resolve to make a full transition into Data Science.
+
+Since then, I have been building a portfolio spanning NLP, GenAI, and applied ML across finance, healthcare, and consumer goods. For me, certifications are the best way to validate self-driven learning — they mark a checkpoint, a commitment. The AWS AI Practitioner and Machine Learning Specialization by Andrew Ng are the most recent of those checkpoints, and there are more to come.`,
   skills: {
     "Programming & Data": ["Python", "Pandas", "NumPy", "SQL", "Git", "AWS", "Scikit-learn", "TensorFlow", "Keras", "Word2Vec", "Gensim", "NLTK", "FuzzyWuzzy"],
     "Machine Learning": ["Regression", "Classification", "Clustering", "Random Forest", "XGBoost", "SVM", "Neural Networks", "SMOTE", "Hyperparameter Tuning", "Time-Series Forecasting", "ROC-AUC", "BERT", "TF-IDF", "spaCy"],
