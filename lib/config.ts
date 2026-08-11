@@ -1,7 +1,7 @@
 export const profile = {
   name: "Gyanaranjan Mishra",
-  title: "Data Scientist | Materials Scientist | ML Researcher",
-  affiliation: "University of New Brunswick",
+  title: "Data Scientist",
+  affiliation: "PhD · Mechanical Engineering · UNB Canada",
   email: "gyanaranjanmishra06@gmail.com",
   photo: "/profile.jpeg",
   bio: `By now you already have an idea about my background, but I'd like to give it a personal touch here.
@@ -14,13 +14,13 @@ With that expertise, I joined Tata Steel Ltd — India's largest steel manufactu
 
 Post Tata Steel, I joined the University of New Brunswick as a doctoral student in Mechanical Engineering. At Tata Steel I had spent over a decade generating proprietary industrial data — designing experiments, characterising microstructures, filing patents. At UNB, I started modelling that same class of data with ML. One paper in particular — comparing traditional constitutive models against machine learning for predicting high-temperature deformation behaviour — wasn't just an academic exercise; it was the moment I realised ML was the sharper tool. I completed coursework in Data Analytics and Research Methods, built and published a deep neural network model for material property prediction using multi-source experimental data, and that work solidified my resolve to make a full transition into Data Science.
 
-Since then, I have been building a portfolio spanning NLP, GenAI, and applied ML across finance, healthcare, and consumer goods. For me, certifications are the best way to validate self-driven learning — they mark a checkpoint, a commitment. The AWS AI Practitioner and Machine Learning Specialization by Andrew Ng are the most recent of those checkpoints, and there are more to come.`,
+Since then, I have been building a portfolio spanning NLP, GenAI, and applied ML across finance, healthcare, and consumer goods. In May 2026, I completed my PhD in Mechanical Engineering at UNB — the culmination of four years of ML-driven materials research. For me, certifications are the best way to validate self-driven learning — they mark a checkpoint, a commitment. The AWS Certified Machine Learning Engineer – Associate (June 2026) and AWS Certified AI Practitioner are the most recent of those checkpoints, and there are more to come.`,
   skills: {
-    "Programming & Data": ["Python", "Pandas", "NumPy", "SQL", "Git", "AWS", "Scikit-learn", "TensorFlow", "Keras", "Word2Vec", "Gensim", "NLTK", "FuzzyWuzzy"],
-    "Machine Learning": ["Regression", "Classification", "Clustering", "Random Forest", "XGBoost", "SVM", "Neural Networks", "SMOTE", "Hyperparameter Tuning", "Time-Series Forecasting", "ROC-AUC", "BERT", "TF-IDF", "spaCy"],
-    "Analytics & Visualization": ["EDA", "Matplotlib", "Seaborn", "Plotly", "Streamlit", "Power BI", "Dashboard Automation"],
-    "Materials Science": ["Physical Metallurgy", "Phase Transformations", "Thermodynamics", "Steel Processing", "Microstructure Analysis", "Thermomechanical Processing", "Deformation Mechanics"],
-    "Generative AI": ["Prompt Engineering", "LLM Integration", "RAG", "Claude API", "FAISS", "Vector Databases", "AI Application Development"],
+    "Programming & Tools": ["Python", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Keras", "SQL", "Git", "AWS (SageMaker, S3)", "Jupyter"],
+    "Machine Learning": ["Regression", "Classification", "Clustering", "Random Forest", "XGBoost", "SVM", "Neural Networks", "Deep Learning", "Word2Vec", "NLTK", "SMOTE", "Time-Series Forecasting"],
+    "ML Engineering": ["End-to-End ML Pipelines", "LLM Integration", "RAG", "FAISS", "Reranking", "Prompt Engineering", "Feature Engineering", "Hyperparameter Tuning", "Cross-Validation", "Streamlit Deployment", "ROC-AUC", "F1", "Precision-Recall"],
+    "Analytics & Visualization": ["EDA", "Matplotlib", "Seaborn", "Plotly", "Power BI", "ETL"],
+    "Domain": ["Statistical Quality Control", "Hypothesis Testing", "A/B Testing", "Experimental Design", "Process Optimization", "Project Management", "Intellectual Property"],
   },
   hobbies: [
     {
@@ -35,16 +35,18 @@ Since then, I have been building a portfolio spanning NLP, GenAI, and applied ML
     scholar: "https://scholar.google.com/citations?user=4-JTIcAAAAAJ&hl=en",
     streamlit: "https://share.streamlit.io/user/gyanaranjanmishra",
   },
-  metrics: {
-    citations: 221,
-    hIndex: 7,
-    i10Index: 7,
-  },
 };
 
 const drive = (id: string) => `https://drive.google.com/file/d/${id}/view`;
 
 export const publications = [
+  {
+    title: "Strain rate dependent deformation behavior evolution and ensuing tensile properties of a medium manganese steel",
+    authors: "Alam MI, Wipp S, Chandan AK, Mishra G, Shekhar S, Bleck W, Chowdhury SG",
+    journal: "Materials Science and Engineering: A",
+    year: 2026,
+    pdf: "",
+  },
   {
     title: "High silicon non-oriented electrical steel sheets fabricated by hot dipping and diffusion annealing",
     authors: "Mishra G, He Y, Aranas C",
@@ -93,6 +95,27 @@ export const publications = [
     journal: "Materials Characterization",
     year: 2023,
     pdf: drive("1YQc4GxUexjD5BYt6vQH2CGti7j76KOOF"),
+  },
+  {
+    title: "Constitutive Modelling of High-Temperature Flow Behavior of a Non-oriented Electrical Steel with 3.2 wt% Si",
+    authors: "Mishra G, Chadha K, He Y, Aranas C",
+    journal: "TMS Annual Meeting & Exhibition",
+    year: 2023,
+    pdf: "",
+  },
+  {
+    title: "Effect of microstructure on corrosion behavior of medium manganese steel",
+    authors: "Kishore K, Chandan AK, Purty M, Karthik V, Mishra G, Sahoo BK, Meena LK, Chakraborty J",
+    journal: "Materials Letters",
+    year: 2023,
+    pdf: "",
+  },
+  {
+    title: "Effect of Si Content on Phase Transition Temperature, Microstructure and Hardness in Medium Mn Steel",
+    authors: "Panigrahi A, Mishra GR, Sahoo AK, Behera M, Mishra PK, Bhoi B",
+    journal: "PREPARE @ IEI Conferences",
+    year: 2022,
+    pdf: "",
   },
   {
     title: "Effect of cold deformation extent and ART annealing duration on the microstructure and mechanical properties of a medium manganese steel",
@@ -192,6 +215,15 @@ export const patents = [
 
 export const certifications = [
   {
+    name: "AWS Certified Machine Learning Engineer – Associate",
+    issuer: "Amazon Web Services",
+    year: "Jun 2026",
+    validUntil: "Jun 2029",
+    pdf: "/certifications/AWS Certified Machine Learning Engineer certificate.pdf",
+    verify: "https://aws.amazon.com/verification",
+    verificationCode: "cc084d575e894d5bab058f0a05b5a083",
+  },
+  {
     name: "AWS Certified AI Practitioner",
     issuer: "Amazon Web Services",
     year: "Apr 2026",
@@ -233,8 +265,68 @@ export const certifications = [
   },
 ];
 
-export const ongoingProjects: { name: string; description: string }[] = [
-  // Fill in your ongoing projects
+export const ongoingProjects: { name: string; description: string }[] = [];
+
+export const experience = [
+  {
+    title: "Visiting Researcher, Advanced Materials Processing",
+    company: "CanmetMATERIALS, Natural Resources Canada",
+    period: "Apr 2022 – Sep 2025",
+    note: "concurrent with PhD",
+    highlights: [
+      "Built and benchmarked XGBoost, Random Forest & Neural Network models on 200K+ multi-source samples; ROC-AUC >0.85 and 67% accuracy improvement over conventional baselines",
+      "Engineered end-to-end analytics pipelines (ingestion → cleaning → feature engineering → evaluation), improving dataset reliability by 25%",
+      "Deployed predictive models as interactive Streamlit applications, driving adoption among government and industry stakeholders",
+      "Translated model results into executive-level technical reports that directly shaped strategic decisions",
+    ],
+  },
+  {
+    title: "Principal Researcher, New Product Development",
+    company: "Research and Development, Tata Steel Ltd, India",
+    period: "Oct 2018 – Aug 2021",
+    highlights: [
+      "Drove end-to-end ML workflows for quality prediction and process optimization, reducing trial-and-error experimentation by 23%",
+      "Built automated performance-monitoring dashboards and reporting pipelines, reducing manual reporting effort by 40%",
+      "Applied hypothesis testing and statistical root cause analysis on high-volume production datasets to diagnose quality deviations",
+    ],
+  },
+  {
+    title: "Researcher, New Product Development",
+    company: "Research and Development, Tata Steel Ltd, India",
+    period: "Jul 2012 – Sep 2018",
+    highlights: [
+      "Analyzed process, quality, and metallurgical datasets exceeding 500K records annually; ML-driven insights reduced the new product development lifecycle by 15%",
+      "Developed regression and empirical ML models for alloy design, replacing costly physical trials",
+    ],
+  },
+];
+
+export const awards = [
+  { name: "RNB Graduate Merit Award", org: "University of New Brunswick, Canada", year: "2021–2025" },
+  { name: "NBIF STEM and Social Innovation Award", org: "University of New Brunswick, Canada", year: "2021, 2022" },
+  { name: "Best Innovative Project Award", org: "Tata Steel Ltd, India", year: "2016, 2017" },
+  { name: "Institute Silver Medal", org: "NIT Rourkela, India", year: "2009" },
+];
+
+export const education = [
+  {
+    degree: "PhD, Mechanical Engineering",
+    institution: "University of New Brunswick, Canada",
+    gpa: "4.2 / 4.3",
+    period: "Sep 2021 – May 2026",
+  },
+  {
+    degree: "MTech, Metallurgical Engineering & Materials Science",
+    institution: "IIT Bombay, India",
+    gpa: "8.76 / 10",
+    period: "Jul 2010 – Jun 2012",
+  },
+  {
+    degree: "BTech, Metallurgical & Materials Engineering",
+    institution: "NIT Rourkela, India",
+    gpa: "9.15 / 10",
+    period: "Jul 2005 – Apr 2009",
+  },
 ];
 
 export const aiPapers = [

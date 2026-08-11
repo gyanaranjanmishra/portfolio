@@ -39,6 +39,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing resume or job description" }, { status: 400 });
   }
 
+  if (resume.length > 8000 || jobDescription.length > 4000) {
+    return NextResponse.json({ error: "Input too large" }, { status: 413 });
+  }
+
   const message = await anthropic.messages.create({
     model: "claude-haiku-4-5-20251001",
     max_tokens: 1024,

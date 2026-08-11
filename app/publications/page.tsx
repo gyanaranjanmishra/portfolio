@@ -41,18 +41,20 @@ export default function PublicationsPage() {
               </div>
               <span className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400 whitespace-nowrap">{pub.year}</span>
             </div>
-            <div className="flex gap-2 flex-wrap">
-              <a href={pub.pdf} target="_blank" rel="noopener noreferrer"
-                className="text-xs px-3 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 transition-colors">
-                View PDF
-              </a>
-              <button
-                onClick={() => summarize(i, pub.pdf, pub.title)}
-                disabled={loading[i]}
-                className="text-xs px-3 py-1 rounded-full bg-blue-700 hover:bg-blue-600 text-white transition-colors disabled:opacity-50">
-                {loading[i] ? "Summarizing..." : summaries[i] ? "Summarized" : "Summarize"}
-              </button>
-            </div>
+            {pub.pdf && (
+              <div className="flex gap-2 flex-wrap">
+                <a href={pub.pdf} target="_blank" rel="noopener noreferrer"
+                  className="text-xs px-3 py-1 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 transition-colors">
+                  View PDF
+                </a>
+                <button
+                  onClick={() => summarize(i, pub.pdf, pub.title)}
+                  disabled={loading[i]}
+                  className="text-xs px-3 py-1 rounded-full bg-blue-700 hover:bg-blue-600 text-white transition-colors disabled:opacity-50">
+                  {loading[i] ? "Summarizing..." : summaries[i] ? "Summarized" : "Summarize"}
+                </button>
+              </div>
+            )}
             {summaries[i] && (
               <div className="bg-gray-800 rounded-lg p-3 text-sm text-gray-300 leading-relaxed border-l-4 border-blue-600">
                 {summaries[i]}

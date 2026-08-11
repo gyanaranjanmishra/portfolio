@@ -5,10 +5,8 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/publications", label: "Publications" },
-  { href: "/patents", label: "Patents" },
+  { href: "/research", label: "Research & Papers" },
   { href: "/certifications", label: "Certifications" },
-  { href: "/ai-papers", label: "AI Papers" },
   { href: "/resume", label: "Resume" },
   { href: "/resume-scorer", label: "Resume Scorer" },
 ];
@@ -23,7 +21,7 @@ export default function NavBar() {
             key={l.href}
             href={l.href}
             className={`px-3 py-1.5 rounded text-sm font-medium whitespace-nowrap transition-colors ${
-              pathname === l.href
+              pathname === l.href || (l.href === "/research" && ["/publications", "/patents", "/ai-papers"].includes(pathname))
                 ? "bg-blue-600 text-white"
                 : "text-gray-400 hover:text-white hover:bg-gray-800"
             }`}
